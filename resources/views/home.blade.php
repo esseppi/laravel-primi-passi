@@ -6,7 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel</title>
 </head>
+
 <body>
-    HELLO WORLD
+    <select>
+        @foreach ($languages as $language)
+        <option :value="$language['id']"> {{$language['lang']}}</option>
+        @endforeach
+    </select>
+    <ul>
+        @foreach ($crypto as $coin)
+        <li>{{ $coin['name']}}</li>
+        @endforeach
+    </ul>
+    
 </body>
 </html>

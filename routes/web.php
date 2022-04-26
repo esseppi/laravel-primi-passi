@@ -14,5 +14,41 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+
+    $data = [
+        'crypto' => [
+            [
+                'id' => '1',
+                'name' => 'btc'
+            ],
+            [
+                'id' => '2',
+                'name' => 'eth'
+            ],
+            [
+                'id' => '3',
+                'name' => 'bnb'
+            ]
+        ],
+        'languages' => [
+            [
+                'id' => '1',
+                'lang' => 'Italian'
+            ],
+            [
+                'id' => '2',
+                'lang' => 'Française'
+            ],
+            [
+                'id' => '3',
+                'lang' => 'German'
+            ],
+            [
+                'id' => '1',
+                'lang' => 'Spanish'
+            ]
+        ]
+    ];
+
+    return view('home', $data);
+})->name('home');
