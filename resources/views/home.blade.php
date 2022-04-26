@@ -15,7 +15,10 @@
     </select>
     <ul>
         @foreach ($crypto as $coin)
-        <li>{{ $coin['name']}}</li>
+        <li>
+            <a href="/prices">
+                {{ $coin['name']}}</li>
+            </a>
         @endforeach
     </ul>
     

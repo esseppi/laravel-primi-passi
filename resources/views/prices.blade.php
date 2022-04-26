@@ -1,0 +1,1 @@
+<div>here prices will be displayed</div>

@@ -52,3 +52,7 @@ Route::get('/', function () {
 
     return view('home', $data);
 })->name('home');
+
+Route::get('prices', function () {
+    return view('prices');
+})->name('prices');
